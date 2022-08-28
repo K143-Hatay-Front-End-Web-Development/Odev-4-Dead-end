@@ -7,9 +7,11 @@ Marvel Characters is a responsive web application fetches data from [marvel api]
 ### Tools
 
 - Next.js (Pre-rendering - SSG, File Based Routing, and API Routes)
-- Redux
+- Redux Toolkit
 - Custom Hooks
 - Axios
+- SASS
+- CSS Modules
 - PrimeIcons
 
 ### Authors
