@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import styles from './styles.module.scss';
 
+// Card displays either Characters or Comics (decision is done by 'comic' prop)
 export default function Card(props) {
    const { config, comic } = props;
    const { description, thumbnail } = config;
@@ -10,6 +11,8 @@ export default function Card(props) {
    const title = comic ? config.title : config.name;
    const desc = description ? `${description.slice(0, 200)} ...` : 'Description is not provided';
    const router = useRouter();
+
+   // display character details when clicked a character, or open comic's url when clicked a comic
    const onClick = () => comic ? window.open(config.link, '_blank') : router.push(`/${config.id}`);
 
    return (
