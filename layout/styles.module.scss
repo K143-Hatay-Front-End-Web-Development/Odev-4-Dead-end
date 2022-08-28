@@ -1,0 +1,8 @@
+@import '../styles/variables';
+
+.content {
+  padding: $default-size * 2;
+  min-width: 23rem;
+  margin-top: $header;
+  background-color: map-get($colors, bg);
+}

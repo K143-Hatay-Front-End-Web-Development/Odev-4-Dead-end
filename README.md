@@ -1,10 +1,13 @@
-# Odev-4
+## Marvel Characters
 
-## Grup Üyeleri
-- [Ad] [Soyad]
-- [Ad] [Soyad]
+Marvel Characters is a responsive web application fetches data from [marvel api](https://developer.marvel.com).
 
-## İçerik
+[See Live](https://marvel-characters-wine.vercel.app)
 
--[React ile Marvel App Web Uygulaması.pdf](https://github.com/K143-Hatay-Front-End-Web-Development/Odev-4/files/9428469/React.ile.Marvel.App.Web.Uygulamasi.pdf)
-  
+### Tools
+
+- Next.js (Pre-rendering - SSG, File Based Routing, and API Routes)
+- Redux
+- Custom Hooks
+- Axios
+- PrimeIcons

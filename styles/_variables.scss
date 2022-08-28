@@ -1,0 +1,12 @@
+$colors: (
+  bg: aliceblue,
+  card: #dba6ff,
+);
+$default-size: 1rem;
+$shadow-size: $default-size / 4;
+$shadow: $shadow-size $shadow-size $shadow-size grey;
+$border: $default-size / 4 solid black;
+$char-width: 15rem;
+$char-height: 25rem;
+$small-height: 5.625rem;
+$header: 5rem;

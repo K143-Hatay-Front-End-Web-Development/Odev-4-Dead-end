@@ -1,0 +1,59 @@
+@use '../../styles/mixins';
+@import '../../styles/variables';
+
+.container {
+  @include mixins.flex(column, center, stretch);
+  max-width: 120rem;
+  margin: 0 auto;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: $default-size 0;
+    font-size: $default-size;
+    text-align: center;
+  }
+
+  .group {
+    position: relative;
+    @include mixins.flex;
+
+    & > img:nth-child(1),
+    .sub-group {
+      width: 45%;
+    }
+
+    & > img:nth-child(1),
+    .sub-group > div {
+      @include mixins.adjust-text;
+    }
+
+    & > img:nth-child(1) {
+      border: $border;
+      border-radius: $default-size;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .sub-group {
+      @include mixins.flex;
+    }
+
+    @include mixins.media-min-width(90rem) {
+      @include mixins.flex(row, space-between, flex-start);
+    }
+  }
+
+  @include mixins.media-min-width(40rem) {
+    h1 {
+      font-size: $default-size * 2;
+    }
+
+    h2 {
+      font-size: $default-size * 1.5;
+    }
+  }
+}

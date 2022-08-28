@@ -1,0 +1,7 @@
+@use '../../styles/mixins';
+@import '../../styles/variables';
+
+.error {
+  @include mixins.flex;
+  height: calc(100vh - $header - 4rem);
+}

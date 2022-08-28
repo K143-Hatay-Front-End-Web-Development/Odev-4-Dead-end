@@ -1,0 +1,31 @@
+@use '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+  @include mixins.flex(row, flex-start);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $header;
+  color: map-get($colors, bg);
+  background-color: black;
+  z-index: 10;
+
+  p {
+    margin-left: $default-size * 2;
+    font-size: $default-size * 1.5;
+    min-width: 16rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include mixins.media-min-width(32rem) {
+    p {
+      margin-left: $default-size * 3;
+      font-size: $default-size * 2.5;
+    }
+  }
+}
