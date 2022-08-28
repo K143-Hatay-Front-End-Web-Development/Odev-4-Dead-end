@@ -1,0 +1,27 @@
+@import './variables';
+
+@mixin flex($direction: column, $main-axis: center, $cross-axis: center) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+}
+
+@mixin char-size {
+  width: $char-width;
+  height: $char-height;
+}
+
+@mixin adjust-text {
+  margin: $default-size * 2 0;
+  text-align: center;
+}
+
+@mixin media-min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

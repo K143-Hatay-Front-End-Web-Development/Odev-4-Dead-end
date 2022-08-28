@@ -1,0 +1,78 @@
+@use '../../styles/mixins';
+@import '../../styles/variables';
+
+.container,
+.container-comic {
+  position: relative;
+  background-color: map-get($colors, card);
+  border-radius: 0 $default-size;
+  box-shadow: $shadow;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+}
+
+.container {
+  @include mixins.char-size;
+
+  img {
+    width: $char-width;
+    height: $char-height * 0.9;
+    border-top-right-radius: $default-size;
+  }
+
+  h4 {
+    @include mixins.flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    border-bottom-left-radius: $default-size;
+    text-align: center;
+  }
+}
+
+.container-comic {
+  width: 100%;
+  min-height: $small-height + $default-size * 2;
+  padding: $default-size;
+
+  img,
+  p {
+    display: none;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  @include mixins.media-min-width(90rem) {
+    img,
+    p {
+      display: block;
+    }
+
+    img {
+      border: $border;
+      border-radius: 0 $default-size;
+      position: absolute;
+      left: $default-size;
+      height: $small-height;
+    }
+
+    h4,
+    p {
+      margin-left: $default-size * 10 !important;
+      margin-right: $default-size !important;
+      text-align: center !important;
+    }
+
+    p {
+      margin-top: $default-size / 2;
+      font-size: $default-size * 2 / 3;
+    }
+  }
+}

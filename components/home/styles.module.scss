@@ -1,0 +1,17 @@
+@use '../../styles/mixins';
+@import '../../styles/variables';
+
+.container {
+  @include mixins.flex;
+  max-width: 110rem;
+  margin: 0 auto;
+
+  .cards {
+    @include mixins.flex(row);
+    flex-wrap: wrap;
+
+    & > div {
+      margin: $default-size * 2;
+    }
+  }
+}
